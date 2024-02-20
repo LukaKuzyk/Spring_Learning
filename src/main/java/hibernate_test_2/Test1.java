@@ -1,4 +1,4 @@
-package hibernate_test;
+package hibernate_test_2;
 
 import hibernate_test.entity.Employee;
 import org.hibernate.Session;
