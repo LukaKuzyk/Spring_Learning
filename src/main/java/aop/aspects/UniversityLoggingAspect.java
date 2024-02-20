@@ -16,18 +16,18 @@ public class UniversityLoggingAspect {
         System.out.println("beforeGetStudentsLoggingAdvice: logging to get list of students");
     }
 
-    @AfterReturning(pointcut = "execution(* getStudents())", returning = "students")
-    public void afterReturningStudentsLoggingAdvice(List<Student> students){
-        Student firstStudent = students.get(0);
-
-        String name = firstStudent.getNameSurname();
-        name = "Mr. " + name;
-        firstStudent.setNameSurname(name);
-
-        float avgGrade = firstStudent.getAvgGrade();
-        avgGrade = avgGrade+1;
-        firstStudent.setAvgGrade(avgGrade);
-
-        System.out.println("afterReturningStudentsLoggingAdvice: logging to get list of students");
-    }
+//    @AfterReturning(pointcut = "execution(* getStudents())", returning = "students")
+//    public void afterReturningStudentsLoggingAdvice(List<Student> students){
+////        Student firstStudent = students.get(0);
+////
+////        String name = firstStudent.getNameSurname();
+////        name = "Mr. " + name;
+////        firstStudent.setNameSurname(name);
+////
+////        float avgGrade = firstStudent.getAvgGrade();
+////        avgGrade = avgGrade+1;
+////        firstStudent.setAvgGrade(avgGrade);
+//
+//        System.out.println("afterReturningStudentsLoggingAdvice: logging to get list of students");
+//    }
 }
