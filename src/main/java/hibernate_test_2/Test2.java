@@ -21,12 +21,23 @@ public class Test2 {
 
 //            Employee emp = new Employee("Michael", "New", "IT", 2500);
 //            Detail detail = new Detail("London", "2256734688", "new@aa.com");
-
+//
 //            emp.setEmpDetail(detail);
 //            detail.setEmployee(emp);
-
+//
 //            session.save(emp);
 
+//            Detail detail = session.get(Detail.class, 3);
+//            session.getTransaction().commit();
+//
+//            System.out.println(detail.getEmployee());
+//            System.out.println("Done!");
+
+//            session.delete(session.get(Employee.class,3));
+
+            Detail detail = session.get(Detail.class, 5);
+            detail.getEmployee().setEmpDetail(null);
+            session.delete(detail);
 
 
             session.getTransaction().commit();
