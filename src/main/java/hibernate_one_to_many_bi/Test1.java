@@ -22,18 +22,31 @@ public class Test1 {
 //            Department department = new Department("IT", 300,1200);
 //            Employee emp1 = new Employee("Luka", "Kuzyk", 800);
 //            Employee emp2 = new Employee("Olga", "Madar", 1000);
+//            Employee emp3 = new Employee("Ivan", "Cool", 700);
+//
 //            department.addEmployeeToDepartment(emp1);
 //            department.addEmployeeToDepartment(emp2);
+//            department.addEmployeeToDepartment(emp3);
+//
 //            session.save(department);
 
-//            Department department = session.get(Department.class, 1);
-//            Employee employee = session.get(Employee.class, 1);
+//            *******************************************
+            System.out.println("Get Department");
+            Department department = session.get(Department.class, 4);
+
+            System.out.println("Show Department");
+            System.out.println(department);
+
+            System.out.println("Show emps of Department");
+            System.out.println(department.getEmps());
+
+//            Employee employee = session.get(Employee.class, 4);
 //            System.out.println(employee);
 //            System.out.println(employee.getDepartment());
 
 //            *******************************************
-            Employee employee = session.get(Employee.class, 4);
-            session.delete(employee);
+//            Employee employee = session.get(Employee.class, 4);
+//            session.delete(employee);
 
             session.getTransaction().commit();
             System.out.println("Done!");
